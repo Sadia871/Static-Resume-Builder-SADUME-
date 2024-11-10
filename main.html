@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <!-- Add this in the <head> section of your HTML file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1>Resume Builder</h1>
+            <form id="resumeForm">
+                <!-- Personal Information -->
+                <div class="form-group">
+                    <h2>Personal Information</h2>
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <div class="error" id="fullNameError"></div>
+
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error" id="emailError"></div>
+
+                    <label for="phone">Phone*</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <div class="error" id="phoneError"></div>
+
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location">
+                </div>
+
+                <!-- Education -->
+                <div class="form-group">
+                    <h2>Education</h2>
+                    <div id="educationFields" class="dynamic-fields"></div>
+                    <button type="button" id="addEducation">Add Education</button>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="form-group">
+                    <h2>Work Experience</h2>
+                    <div id="experienceFields" class="dynamic-fields"></div>
+                    <button type="button" id="addExperience">Add Experience</button>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-group">
+                    <h2>Skills</h2>
+                    <label for="skills">Enter skills (comma-separated)*</label>
+                    <textarea id="skills" name="skills" required></textarea>
+                    <div class="error" id="skillsError"></div>
+                </div>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+
+        <div class="resume-preview" id="resumePreview">
+            <div class="resume-header">
+                <h1 id="previewName"></h1>
+                <p id="previewContact"></p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Education</h2>
+                <div id="previewEducation"></div>
+            </div>
+
+            <div class="resume-section">
+                <h2>Work Experience</h2>
+                <div id="previewExperience"></div>
+            </div>
+
+            <div class="resume-section">
+                <h2>Skills</h2>
+                <div id="previewSkills" class="skill-tags"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Add this in the <head> section of your HTML file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

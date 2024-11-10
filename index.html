@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>SADUME.COM</title>
+    <style>
+        :root {
+            --primary-color: #6d1edb;
+            --secondary-color: #b244c3;
+            --text-light: #FFFFFF;
+            --text-dark: #1F2937;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            min-height: 100vh;
+            color: var(--text-light);
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--text-light);
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--text-light);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hero-container {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .create-button {
+            background: linear-gradient(45deg, #6d1edb, #7a1b99);
+            transition: all 0.3s ease;
+            border-style: inherit;
+            transform-origin: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .create-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 1rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="container mx-auto px-4 py-6">
+        <div class="flex flex-wrap items-center justify-between">
+            <a class="flex items-center space-x-3 logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="text-2xl font-bold">SADUME</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Menu</a>
+            </nav>
+
+            <button class="hidden md:flex items-center space-x-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg hover:bg-opacity-30 transition-all duration-300">
+                <span>Get Started</span>
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="hero-container max-w-4xl mx-auto text-center">
+            <img src="./front-pi.jpg" alt="Resume Builder Hero" class="rounded-lg shadow-xl mx-auto mb-8 w-full max-w-2xl">
+            
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
+                Create Your Professional Resume in Minutes!
+            </h1>
+            
+            <p class="text-lg md:text-xl mb-8 text-blue-50 leading-relaxed max-w-2xl mx-auto">
+                We make resume creation fast, easy, and hassle-free. Whether you're a student, a job seeker, or a professional, 
+                our resume builder is designed to meet your needs. With customizable templates and step-by-step guidance, you can create a polished resume in no time.
+            </p>
+            
+            <a href="./resume.html" class="create-button inline-block px-8 py-4 text-lg font-semibold rounded-lg text-white">
+                Create Resume
+            </a>
+        </div>
+    </main>
+</body>
+</html>

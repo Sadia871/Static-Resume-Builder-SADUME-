@@ -1,0 +1,355 @@
+/* Modern CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #3B1E54;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Form Styling */
+.form-section {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.form-section:hover {
+    transform: translateY(-5px);
+}
+
+.form-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    animation: slideUp 0.5s ease-out;
+}
+
+.form-group h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 0.95em;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+/* Dynamic Fields Styling */
+.field-group {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.field-group:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.remove-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Buttons Styling */
+button {
+    background: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Resume Preview Styling */
+.resume-preview {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.resume-preview:hover {
+    transform: translateY(-5px);
+}
+
+.resume-header {
+    border-bottom: 3px solid #3498db;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.resume-header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.resume-section {
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.resume-section h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Skills Tags Styling */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    background: #3498db;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    animation: scaleIn 0.3s ease-out;
+}
+
+/* Error Messages */
+.error {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    animation: shake 0.5s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Export Button Styling */
+.export-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.export-btn {
+    background: #27ae60;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+.export-btn:hover {
+    background: #219a52;
+}
+
+.export-icon {
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-preview {
+        position: relative;
+        top: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .form-section, .resume-preview {
+        padding: 20px;
+    }
+
+    .form-section h1 {
+        font-size: 2em;
+    }
+}
+
+/* Print Styles for PDF */
+@media print {
+    .form-section, .export-section {
+        display: none;
+    }
+
+    .resume-preview {
+        box-shadow: none;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+/* Loading State */
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.export-btn {
+    background: #27ae60;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.export-btn:hover {
+    background: #219a52;
+    transform: translateY(-2px);
+}
+
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
